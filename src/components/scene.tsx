@@ -1,6 +1,7 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
+import { Sky } from "@react-three/drei";
 import { useRef, useState } from "react";
 import { Mesh } from "three";
 
@@ -37,11 +38,12 @@ function Box({ position }: BoxProps) {
 
 export default function Scene() {
   return (
-    <Canvas>
+    <Canvas className="z-0">
       <ambientLight color="white" />
       <directionalLight color="white" position={[0, 0, 15]} />
       <Box position={[-1.2, 0, 0]} />
       <Box position={[+1.2, 0, 0]} />
+      <Sky />
     </Canvas>
   );
 }

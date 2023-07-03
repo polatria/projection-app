@@ -8,8 +8,8 @@ export default function Page() {
   return (
     <>
       <Menubar />
-      <div className="bg-slate-500 w-screen h-screen z-0" />
-      {/* <Scene /> */}
+      {/* <div className="bg-slate-500 absolute w-full h-full z-0" /> */}
+      <Scene />
       {/* <Toolbar /> */}
       {/* <Sidebar /> */}
       <Statusbar />

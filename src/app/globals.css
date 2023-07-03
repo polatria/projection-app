@@ -1,3 +1,33 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply w-full overflow-hidden
+}
+
+.content {
+  @apply relative w-screen h-screen overflow-auto
+}
+
+.statusbar {
+  @apply flex px-2 py-1 bg-base-300 absolute inset-x-0 bottom-0;
+}
+
+.statusbar-left {
+  @apply flex-auto flex select-none space-x-1
+}
+
+.statusbar-right {
+  @apply flex-initial flex select-none space-x-1
+}
+
+@media (min-width: 48rem) {
+  .statusbar {
+    grid-auto-flow: column;
+  }
+
+  .statusbar-left, .statusbar-right {
+    grid-auto-flow: row dense;
+  }
+}
